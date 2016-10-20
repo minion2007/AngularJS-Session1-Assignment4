@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<title>Two controllers in one page</title>
+</head>
+<body ng-app>
+	<div ng-controller="myCtrl1">
+		{{message}}
+	</div>
+
+	<div ng-controller="myCtrl2">
+	{{message}}
+	</div>
+
+<script>
+	function myCtrl1($scope)
+	{
+	$scope.message = "This is from my first controller!";
+	}
+	function myCtrl2($scope)
+	{
+	$scope.message = "This is from my second controller!";
+	}
+</script>
+</body>
+</html>
